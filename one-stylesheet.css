@@ -191,8 +191,13 @@ h6 {
   line-height: 1.5;
 }
 
-mark {
-  background-color: var(--color-link-underline-hover);
+abbr {
+  font-variant-caps: all-petite-caps;
+  font-weight: bolder;
+}
+
+abbr[title] {
+  cursor: help;
 }
 
 kbd {
@@ -202,6 +207,10 @@ kbd {
   border: var(--border-hairline) solid currentcolor;
   border-radius: 0.3em;
   box-shadow: inset 0 -1px 0 currentcolor;
+}
+
+mark {
+  background-color: var(--color-link-underline-hover);
 }
 
 /**
