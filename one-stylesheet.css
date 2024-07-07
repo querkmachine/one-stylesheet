@@ -210,7 +210,13 @@ kbd {
 }
 
 mark {
-  background-color: var(--color-link-underline-hover);
+  background-color: var(--color-link-underline-visited);
+  border-block-end: 0.2em solid
+    color-mix(
+      in lch,
+      var(--color-text) 25%,
+      var(--color-link-underline-visited)
+    );
 }
 
 /**
