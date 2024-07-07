@@ -6,6 +6,8 @@ Specific versions can be installed via npm by running the install command with a
 
 - Added new styles for `abbr` elements.
 - Added top margin to `h1` elements.
+- Added styles for `q` elements.
+- Improved styles for multiple paragraphs within `blockquote`s.
 - Changed the highlight colour used by `mark` to have higher contrast.
 - Reduced the top and bottom padding on the body.
 
