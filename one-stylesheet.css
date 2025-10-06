@@ -1,23 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wdth,wght@0,100..120,400..700;1,100..120,400..700&display=swap");
+
+@font-feature-values "Hubot Sans" {
+  @styleset {
+    human: 1;
+    machine: 4;
+  }
+}
 
 :root {
-  --color-text: #fff;
-  --color-text-subtle: #d4d4d7;
-  --color-text-accent: #00fa17;
-  --color-background: #2a2536;
-  --color-surface: #3d364f;
+  --color-text: light-dark(#4b4b4b, #fff);
+  --color-text-subtle: light-dark(#6d6d6e, #f5f5f5);
+  --color-text-accent: light-dark(#578057, #0ff10f);
+  --color-background: light-dark(#f9f9f9, #252134);
+  --color-surface: light-dark(#ffffff, #302750);
   --color-link: var(--color-text-accent);
-  --color-link-hover: #12c873;
+  --color-link-hover: light-dark(#6c9679, #0bc148);
   --color-link-visited: var(--color-link-hover);
-  --color-furniture: #786999;
+  --color-furniture: light-dark(#786999, #7c56fc);
 
   --color-focus-background: #fc0;
   --color-focus-text: #000;
 
-  --font-body: "Space Grotesk", system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-body:
+    "Hubot Sans", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   --font-header: var(--font-body);
-  --font-code: "Space Mono", monospace, monospace;
+  --font-code: ui-monospace, monospace;
 
   --size--2: clamp(0.6944rem, 0.6351rem + 0.2969vi, 0.88rem);
   --size--1: clamp(0.8333rem, 0.748rem + 0.4267vi, 1.1rem);
@@ -56,17 +64,6 @@
   --border-thick: 0.5rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-text: #334139;
-    --color-text-subtle: #586b60;
-    --color-text-accent: #12803b;
-    --color-background: #ffffff;
-    --color-surface: #f4f3f7;
-    --color-link-hover: #2baf5d;
-  }
-}
-
 /**
  * ROOT STYLES 
  * ===========
@@ -86,7 +83,8 @@
   color: var(--color-focus-text);
   background-color: var(--color-focus-background);
   text-decoration: none;
-  box-shadow: 0 -2px var(--color-focus-background),
+  box-shadow:
+    0 -2px var(--color-focus-background),
     0 4px var(--color-focus-text);
   box-decoration-break: clone;
 }
@@ -97,6 +95,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  color-scheme: dark light;
 }
 
 body {
@@ -122,6 +121,7 @@ p {
   margin-block-start: 0;
   margin-block-end: var(--space-5);
   font-size: var(--size-0);
+  font-variant-alternates: styleset(human);
   line-height: 1.5;
 }
 
@@ -131,30 +131,32 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-header);
-  font-feature-settings: "ss01", "ss04", "case";
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-weight: 670;
+  font-variant-alternates: styleset(machine);
   text-wrap: balance;
   letter-spacing: -0.02em;
+  line-height: 1.5;
 }
 
 h1 {
-  margin-block-start: var(--space-8);
-  margin-block-end: var(--space-8);
+  margin-block: var(--space-8);
+  color: var(--color-text-accent);
   font-size: var(--size-5);
+  font-stretch: 120%;
   line-height: 1;
 }
 
 h2 {
-  margin-block-start: var(--space-9);
-  margin-block-end: var(--space-6);
+  margin-block-start: var(--space-7-8);
+  margin-block-end: var(--space-5-6);
   font-size: var(--size-4);
   line-height: 1.1;
 }
 
 h3 {
-  margin-block-start: var(--space-7);
-  margin-block-end: var(--space-4);
+  margin-block-start: var(--space-6-7);
+  margin-block-end: var(--space-5);
   font-size: var(--size-3);
   line-height: 1.25;
 }
@@ -163,21 +165,19 @@ h4 {
   margin-block-start: var(--space-5);
   margin-block-end: var(--space-5);
   font-size: var(--size-2);
-  line-height: 1.5;
 }
 
 h5 {
   margin-block-start: var(--space-5);
   margin-block-end: var(--space-4);
   font-size: var(--size-1);
-  line-height: 1.5;
 }
 
 h6 {
-  margin-block-start: var(--space-5);
-  margin-block-end: var(--space-3);
+  margin-block-start: 0;
+  margin-block-end: var(--space-2);
   font-size: var(--size-0);
-  line-height: 1.5;
+  letter-spacing: unset;
 }
 
 abbr {
@@ -320,21 +320,13 @@ code {
   color: var(--color-code-text);
   background-color: var(--color-code-background);
   font-family: var(--font-code);
-  font-feature-settings: "lnum", "liga" 0, "calt" 0;
+  font-feature-settings:
+    "lnum",
+    "liga" 0,
+    "calt" 0;
   padding-inline: 0.2em;
   white-space: normal;
   word-break: break-word;
-}
-
-@media (prefers-color-scheme: light) {
-  code {
-    --color-code-background: color-mix(
-      in lch,
-      #000 3%,
-      var(--color-background)
-    );
-    --color-code-border: color-mix(in lch, #000 7%, var(--color-background));
-  }
 }
 
 pre code {
@@ -360,7 +352,7 @@ hr {
   block-size: 0;
   margin-block: var(--space-5);
   border: none;
-  border-block-start: var(--border-regular) solid var(--color-furniture-alt);
+  border-block-start: var(--border-regular) solid var(--color-furniture);
 }
 
 /**

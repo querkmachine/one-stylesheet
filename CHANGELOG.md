@@ -1,6 +1,16 @@
 # Changelog
 
-Specific versions can be installed via npm by running the install command with a [tag number](https://github.com/querkmachine/one-stylesheet/tags) appended, e.g. `npm install querkmachine/one-stylesheet#1.0.0`.
+Specific versions can be installed via npm by running the install command with a [tag number](https://github.com/querkmachine/one-stylesheet/tags) appended, e.g. `npm install querkmachine/one-stylesheet#2.1.0`.
+
+## 2.1.0 (2025-10-06)
+
+Updates many visual aspects to align with changes to beeps.website.
+
+- Changed primary typeface from Space Grotesk to Hubot Sans.
+- Updated spacing around headings.
+- Updated colours across the board.
+- Updated colours to use the `light-dark` CSS function instead of media queries.
+- Fixed horizontal rules still using a colour removed in 2.0.0.
 
 ## 2.0.0 (2025-04-18)
 
