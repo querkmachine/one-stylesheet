@@ -447,6 +447,107 @@ table thead th {
 }
 
 /**
+ * FORM ELEMENTS
+ * =============
+ */
+
+/* Labels */
+label {
+  display: block;
+  margin-block-end: var(--space-1);
+}
+
+/* Buttons */
+button {
+  margin: 0;
+  margin-block-end: var(--space-5);
+  padding-block: var(--space-1);
+  padding-inline: var(--space-2);
+  border: 2px solid var(--color-link);
+  color: var(--color-surface);
+  background-color: var(--color-link);
+  font-family: inherit;
+  font-size: var(--size-0);
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+
+button:is(:hover, :active) {
+  border-color: var(--color-link-hover);
+  background-color: var(--color-link-hover);
+}
+
+button:is([type="reset"], [type="button"]) {
+  border-color: currentcolor;
+  color: var(--color-text);
+  background-color: var(--color-canvas);
+}
+
+button:is([type="reset"], [type="button"]):is(:hover, :active) {
+  color: var(--color-text-subtle);
+  background-color: var(--color-surface);
+}
+
+button:focus-visible {
+  border-color: currentcolor;
+  color: var(--color-focus-text);
+  background-color: var(--color-focus-background);
+  outline: 2px solid var(--color-focus-text);
+}
+
+/* Text-style inputs */
+input:is(
+  [type="text"],
+  [type="search"],
+  [type="number"],
+  [type="email"],
+  [type="tel"],
+  [type="date"],
+  [type="time"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="week"]
+),
+textarea {
+  margin-block-end: var(--space-3);
+  padding-block: var(--space-1);
+  padding-inline: var(--space-2);
+  border: 2px solid currentcolor;
+  background-color: var(--color-surface);
+  font-family: inherit;
+  font-size: var(--size--1);
+}
+
+input:is(
+    [type="text"],
+    [type="search"],
+    [type="number"],
+    [type="email"],
+    [type="tel"],
+    [type="date"],
+    [type="time"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"]
+  ):focus-visible,
+textarea:focus-visible {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  outline: 2px solid currentcolor;
+  box-shadow: 0 0 0 5px var(--color-focus-background);
+}
+
+input:is([type="number"]) {
+  font-variant-numeric: tabular-nums;
+}
+
+textarea {
+  inline-size: 100%;
+  resize: vertical;
+}
+
+/**
  * PRINT STYLES
  * ============
  */
