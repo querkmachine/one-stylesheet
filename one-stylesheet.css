@@ -113,8 +113,8 @@ body {
 }
 
 /**
- * BASIC TYPOGRAPHY
- * ================
+ * TYPOGRAPHY
+ * ==========
  */
 
 p {
@@ -215,6 +215,17 @@ mark {
 
 ins {
   text-decoration-style: double;
+}
+
+sub,
+sup {
+  font-size: var(--size--2);
+  font-weight: 600;
+}
+
+sub {
+  /* Prevent extending the line height. */
+  vertical-align: bottom;
 }
 
 /**
