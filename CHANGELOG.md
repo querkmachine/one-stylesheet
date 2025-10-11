@@ -6,6 +6,7 @@ Specific versions can be installed via npm by running the install command with a
 
 - Added styles for definition lists.
 - Added styles for subscript and superscript text.
+- Added styles for `small` print.
 
 ## 2.1.0 (2025-10-06)
 

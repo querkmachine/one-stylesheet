@@ -228,6 +228,11 @@ sub {
   vertical-align: bottom;
 }
 
+small {
+  font-size: var(--size--1);
+  font-weight: 470;
+}
+
 /**
  * LISTS
  * =====
