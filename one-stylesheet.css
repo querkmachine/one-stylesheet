@@ -223,10 +223,15 @@ ins {
  */
 
 ol,
-ul {
+ul,
+dl {
   margin: 0;
   margin-block-end: var(--space-5);
   padding: 0;
+}
+
+ol,
+ul {
   padding-inline-start: 2em;
   list-style-type: none;
 }
@@ -243,8 +248,17 @@ ul {
   list-style-type: square;
 }
 
-li + li {
+li + li,
+dt:not(:first-child) {
   margin-block-start: var(--space-1);
+}
+
+dt {
+  font-weight: 550;
+}
+
+dd {
+  margin-inline-start: 2em;
 }
 
 /**

@@ -2,6 +2,10 @@
 
 Specific versions can be installed via npm by running the install command with a [tag number](https://github.com/querkmachine/one-stylesheet/tags) appended, e.g. `npm install querkmachine/one-stylesheet#2.1.0`.
 
+## Unreleased
+
+- Added styles for definition lists.
+
 ## 2.1.0 (2025-10-06)
 
 Updates many visual aspects to align with changes to beeps.website.
