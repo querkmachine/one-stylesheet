@@ -525,7 +525,8 @@ input:is(
   [type="month"],
   [type="week"]
 ),
-textarea {
+textarea,
+select {
   margin-block-end: var(--space-3);
   padding-block: var(--space-1);
   padding-inline: var(--space-2);
@@ -547,7 +548,8 @@ input:is(
     [type="month"],
     [type="week"]
   ):focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+select:focus-visible {
   color: var(--color-text);
   background-color: var(--color-surface);
   outline: 2px solid var(--color-focus-text);
