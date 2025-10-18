@@ -1,6 +1,6 @@
 {
   "name": "beeps-one-stylesheet",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A (mostly) classless CSS implementation of [beeps' brand](https://beeps.website/brand/) for simple, prosaic documents; with support for light and dark modes and alternate writing modes.",
   "keywords": [],
   "author": "beeps <hi@berly.kim>",

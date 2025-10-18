@@ -1,8 +1,8 @@
 # Changelog
 
-Specific versions can be installed via npm by running the install command with a [tag number](https://github.com/querkmachine/one-stylesheet/tags) appended, e.g. `npm install querkmachine/one-stylesheet#2.1.0`.
+Specific versions can be installed via npm by running the install command with a [tag number](https://github.com/querkmachine/one-stylesheet/tags) appended, e.g. `npm install querkmachine/one-stylesheet#2.2.0`.
 
-## Unreleased
+## 2.2.0 (2025-10-18)
 
 - Added styles for definition lists.
 - Added styles for subscript and superscript text.
